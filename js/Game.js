@@ -23,4 +23,20 @@ class Game {
       form.display();
     }
   }
+
+  play(){
+    
+    form.hide();
+    Player.getPlayerInfo();
+    if(allPlayers!=undefined){
+
+    
+    var yPos = 130;
+    for(var plr in allPlayers){
+      yPos+=20;
+      text(allPlayers[plr].name+":"+allPlayers[plr].distance,120,yPos);
+    }
+  }
+    
+  }
 }
